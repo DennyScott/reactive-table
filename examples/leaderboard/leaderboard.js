@@ -13,7 +13,8 @@ if (Meteor.isClient) {
         fields: [
           { key: 'name', label: 'Full Name' },
           { key: 'name', label: 'First Name', fn: function (name) { return name.split(' ')[0]; } },
-          { key: 'score', label: 'Score'}
+          { key: 'score', label: 'Score'},
+          { key: 'score', label: 'Score2', fn: function (score) {return 100 - score;}}
         ]
     };
   };
